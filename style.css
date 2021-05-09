@@ -1,0 +1,221 @@
+html, body{
+    height: 100%;
+}
+body{
+    margin: 0;
+    background-color: rgb(234, 236, 236);
+    font-family: 'NizarART', Courier, monospace;
+}
+.whole-container{
+    margin: 0 70px;
+}
+.navbar{
+    font-size: larger;
+    box-sizing: border-box;
+    padding: 30px 0;
+    display: flex;
+    height: 25px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(165, 19, 19);
+}
+.brand{
+    font-size: 130%;
+    display: inline-block;
+    font-size: 50px;
+    color: black;
+    font-family:'Edwardian Script ITC', Courier, monospace;
+}
+.hamburger-menu{
+    display: none;
+}
+.line{
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: rgb(228, 18, 18);
+    transition: all 0.7s;
+}
+.elements{
+    display: flex;
+    flex-direction: row;
+}
+.elements div{
+    margin-right: 20px;
+    cursor: pointer;
+    transition: text-shadow .3s;
+}
+.elements div:hover{
+    text-shadow: 0 0px 15px rgba(240, 1, 1, .3);
+}
+.shopping-cart-icon{
+    background-color: rgb(19, 19, 19);
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 5px;
+    padding: 4px 6px 0 15px;
+}
+.shopping-cart-icon img{
+    width: 1.5em;
+}
+.grid-container{
+    display: grid;
+    grid-template-rows: 150px 200px auto 150px 100px;
+    font-size: 15px;
+    width: 35%;
+    color: rgb(165, 19, 19);
+    text-shadow: 0 0 1px rgb(250, 46, 46);
+}
+.writing{
+    letter-spacing: 10px;
+    align-self: end;
+    grid-row: 1;
+    font-size: 2em;
+    font-family: 'NizarART', Courier, monospace;
+}
+.writing2{
+    font-family:'Edwardian Script ITC', Courier, monospace;
+    font-size: 10em;
+    grid-row: 2;
+    color: black;
+    text-shadow: none;
+}
+.writing3{
+    font-size: 1.1em;
+    grid-row: 3;
+}
+.writing4{
+    grid-row: 4;
+    align-self: center;
+}
+.writing5{
+    grid-row: 5;
+    align-self: end;
+}
+.space-for-image{
+    background-image: url("src/img/pizza6.png");
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.view-menu{
+    padding: 15px 30px;
+    font-size: 1.1em;
+    background-color: rgb(245, 21, 21);
+    box-shadow: 0 20px 40px rgba(255, 13, 13, .3);
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    transition: background-color .3s, box-shadow .3s;
+    margin-right: 30px;
+}
+.view-menu:hover{
+    background-color: rgb(230, 0, 0);
+    box-shadow: 0 20px 20px rgba(255, 13, 13, .3);
+}
+.call-order{
+    padding: 15px 30px;
+    font-size: 1.1em;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 20px 40px rgba( 0, 0, 0, 0.2);
+    border-radius: 30px;
+    color: inherit;
+    text-decoration: none;
+    transition: background-color .3s, box-shadow .3s, color .3s;
+}
+.call-order:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+}
+.change{
+    top: 0 !important;
+}
+@media screen and (max-width: 1200px) {
+    .grid-container{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .grid-container{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 769px) {
+    .grid-container{
+        font-size: 12.5px;
+        width: 100%;
+        text-align: center;
+    }
+    .whole-container{
+        margin: 0 20px;
+    }
+    .navbar button{
+        display: inline-block;
+    }
+    .hamburger-menu{
+        width: 35px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .elements{
+        flex-direction: column;
+        margin-right: 0;
+        position: fixed;
+        top: -250px;
+        right:0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        transition: top 0.3s;
+    }
+    .elements div{
+        padding: 5px;
+        color: white;
+        margin: 0 0 0 50px;
+    }
+    .elements div:hover{
+        background-color:rgba(17, 17, 17, 0.4);
+    }
+    #first-child{
+        cursor: unset;
+        display: block;
+        height: 50px;
+        width: 100%;
+    }
+    .change .line-1{
+        transform: rotateZ(-405deg) translate(-8px, 6px);
+    }
+    .change .line-2{
+        opacity: 0;
+    }
+    .change .line-3{
+        transform: rotateZ(405deg) translate(-8px, -6px);
+    }
+}
+@media screen and (max-width: 480px) {
+    .grid-container{
+        font-size: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    .whole-container{
+        margin: 0 20px;
+    }
+    .navbar button{
+    display: inline-block;
+    }
+}
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
